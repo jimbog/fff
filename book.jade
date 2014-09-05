@@ -1,0 +1,19 @@
+head
+  title book
+body
+  nav.ui.menu
+    h3.header.item.lessons-toggle Lessons
+    a.active.item Home
+    a.item Link
+
+  +lesson
+  +lessonsMenu
+
+template(name='lesson')
+  +markdown
+    {{content}}
+
+template(name='lessonsMenu')
+  .ui.vertical.sidebar.menu
+    each lessons
+      a.item {{title}}
